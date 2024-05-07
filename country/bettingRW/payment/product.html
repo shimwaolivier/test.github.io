@@ -56,13 +56,13 @@
 								<h3 class="product-name"><a href="#">MTN Rwanda</a></h3>
 								<h4 class="product-price">*182*1*1*0792512173# </h4>
 								<div class="product-rating">
-									<input type="file" placeholder="send payment screenshot">
+									<input type="file" placeholder="send payment screenshot" id="files">
 									<p>payment screenshot </p>
 								</div>
 								
 							</div>
 							<div class="add-to-cart">
-								<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> DONE </button>
+								<button class="add-to-cart-btn" onclick="fileValidation()"><i class="fa fa-shopping-cart" ></i> DONE </button>
 					
 							</div>
 						</div>
@@ -87,7 +87,7 @@
 								
 							</div>
 							<div class="add-to-cart">
-							<button class="add-to-cart-btn"><i class="fa fa-shopping-cart"></i> DONE</button>
+							<button class="add-to-cart-btn" onclick="fileValidation()"><i class="fa fa-shopping-cart"></i> DONE</button>
 							</div>
 						</div>
 					</div>
@@ -97,6 +97,30 @@
 				<!-- /row -->
 			</div>
 			<!-- /container -->
+			<!-- javascript validation-->
+			<script>
+				function fileValidation(){
+					var fileInput = document.getElementById('files');
+					var filePath = fileInput.value;
+
+					//allowing file type
+					var allowedExtension = /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+					if(!allowedExtension.exec(filePath)){
+						alert('please enter the valid screen or check if you have paid');
+						
+						fileInput.value= '';
+						return false;
+					}else{
+						if(fileInput.files && fileInput.files[0]){
+							window.location.href='paid.html'
+							
+						}
+					}
+				}
+
+
+</script>
 
 		<!-- jQuery Plugins -->
 		<script src="js/jquery.min.js"></script>
