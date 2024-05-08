@@ -39,12 +39,12 @@
 	            
 	            </div>
 	            <div class="form-group">
-	            	<a href="country/country.html" class="btn form-control btn-danger rounded submit px-3" onclick="check()">Sign Up</button>
+	            	<a href="country/country.html" class="btn form-control btn-danger rounded submit px-3">Sign Up</button>
 	            </div>
 	          </form>
 	          <div class="w-100 text-center mt-4 text">
 	          	<p class="mb-0">Do you have an account?</p>
-		          <a href="index.html">Login</a>
+		          <a href="index.html" class="mb-0">Login</a>
 	          </div>
 	        </div>
 				</div>
@@ -52,22 +52,9 @@
 		</div>
 	</div>
 	</section>
-	<script>
-		function check(){
-			var user = document.GetElementById('user');
-		var email = document.GetElementById('email');
-        var pass = document.GetElementById('pass');
+	
 
-		if(user === '' || email === '' || pass === '' || pass<5){
-			alert('please enter the signup information');
-		}else{
-			window.location.href = 'country/country.html';
-		}
-
-		}
 		
-
-		</script>
 
 	<script src="js/jquery.min.js"></script>
   <script src="js/popper.js"></script>
